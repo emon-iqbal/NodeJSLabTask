@@ -2,7 +2,6 @@ var express 	= require('express');
 var bodyParser 	= require('body-parser');
 var login 		= require('./controller/Login');
 var admin 		= require('./controller/Admin');
-var employee 	= require('./controller/EmpLoyee');
 var logout 		= require('./controller/LogOuT');
 var app 		= express();
 
@@ -14,19 +13,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use('/Login', login);
 app.use('/LogOuT', logout);
-//app.use('/ReGisTRaTiOn', ReGisTRaTiOn);
 app.use('/Admin', admin);
-app.use('/EmpLoyee', employee);
+
 
 
 app.get('/', function(req, res){
 	res.send("WELCOME TO the Arena of RevoLuTion!<br><br> <a href='/Login'> LOGiN</a> ");
 });
-
-/*app.get('/', function(req, res){
-	res.send("<a href='/ReGisTRaTiOn'> ReGisTRaTiOn</a> ");
-});*/
-
 
 app.listen(3000, function(){
 	console.log('express http server started at...3000');
