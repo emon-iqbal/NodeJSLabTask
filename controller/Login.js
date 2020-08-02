@@ -11,10 +11,10 @@ router.get('/',
 router.post('/', function(req, res)
 {
 
-	if(req.body.uname == "emon" && req.body.password == "112134"){
+	if(req.body.uname == "emon" && req.body.pwd == "112134"){
 		res.redirect('/Admin');
 	}
-	else if(req.body.uname == "ratuL" && req.body.password == "raT315"){
+	else if(req.body.uname == "ratuL" && req.body.pwd == "raT315"){
 		res.redirect('/Employee');
 	}
 	else{
