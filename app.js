@@ -1,14 +1,16 @@
-var express 	= require('express');
-var bodyParser 	= require('body-parser');
-var login 		= require('./controller/Login');
-var admin 		= require('./controller/Admin');
-var employee 	= require('./controller/Employee');
-var addemp 		= require('./controller/Admin/AddEmpLoyee');
-var emplist 	= require('./controller/Admin/AllEmpList');
-var empupdate 	= require('./controller/Admin/UPDATE');
-var empdelete 	= require('./controller/Admin/DELETE');
-var logout 		= require('./controller/LogOuT');
-var app 		= express();
+var express= require('express');
+var bodyParser= require('body-parser');
+var login= require('./controller/Login');
+var admin= require('./controller/Admin');
+var addemp= require('./controller/Admin/AddEmpLoyee');
+var emplist= require('./controller/Admin/AllEmpList');
+var empupdate= require('./controller/Admin/UPDATE');
+var empdelete= require('./controller/Admin/DELETE');
+var employee= require('./controller/Employee');
+var empro= require('./controller/Employee/MyProfile');
+var updateemp= require('./controller/Employee/UpdateProfile');
+var logout= require('./controller/LogOuT');
+var app= express();
 
 //config
 app.set('view engine', 'ejs');
@@ -19,11 +21,13 @@ app.use(bodyParser.json());
 app.use('/Login', login);
 app.use('/LogOuT', logout);
 app.use('/Admin', admin);
-app.use('/Employee', employee);
 app.use('/Admin/AddEmpLoyee', addemp);
 app.use('/Admin/AllEmpList', emplist);
 app.use('/Admin/UPDATE', empupdate);
 app.use('/Admin/DELETE', empdelete);
+app.use('/Employee', employee);
+app.use('/Employee/MyProfile', empro);
+app.use('/Employee/UpdateProfile', updateemp);
 
 
 app.get('/', function(req, res){
