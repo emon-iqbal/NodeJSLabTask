@@ -6,18 +6,22 @@ router.get('/', function(req, res)
 	res.render('Admin/dashboard');
 });
 
-/*router.post('/', function(req, res)
+router.post('/', function(req, res)
 {
 
-	if(req.body.emon == req.body.password)
+	if(req.body.submit)
 	{
-		res.redirect('/Admin');
+		res.render('Admin/Admin/AddEmpLoyee');
+	}
+	else if(req.body.view)
+	{
+		res.render('Admin/Admin/AllEmpList');
 	}
 	else
 	{	
-		res.send('iNVALiD !!PLEASE TRY AGAIN');
+		res.send('CANNOT FOUND any button click');
 	}
 	
 });
-*/
+
 module.exports = router;
