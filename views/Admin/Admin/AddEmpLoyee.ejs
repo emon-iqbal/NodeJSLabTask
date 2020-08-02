@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add EmpLoyee</title>
+</head>
+<body><center>
+		<form method="post">
+
+				<table>
+					<tr>
+						<td><h2><center>ADD NEW EMPLOYEE</center></h2></td>
+					</tr>
+					<tr>
+						<td>EmpName</td>
+						<td><input type="text" name="emp_name" required></td>
+					</tr>
+					<tr>
+						<td>EmpPhone</td>
+						<td><input type="text" name="emp_phone" required></td>
+					</tr>
+					<tr>
+						<td>EmpAddress</td>
+						<td><input type="text" name="emp_address" required></td>
+					</tr>
+					
+					<tr>
+						<td>EmpGender</td>
+						<td>
+							<select name="emp_GENDER" required>
+							<option value="">--SELECT FROM HERE--</option>
+							<option value="MaLe">MALE</option>
+							<option value="FemaLe">FEMALE</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>EmpDesignation</td>
+						<td>
+						<select name="emp_desig" required>
+						<option value="">--SELECT FROM HERE--</option>
+						<option value="student">STUDENT</option>
+						<option value="web developer">WEB_DEVELOPER</option>
+						<option value="analyst">ANALYST</option>
+						<option value="teacher">TEACHER</option>
+						<option value="intern">INTERN</option>
+						<option value="researcher">RESEARCHER</option>
+						</select>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="AddEmpLoyee"></td>
+					</tr>
+				</table>
+				<br>
+				<a href="/Admin">BACK TO ADMIN HOME</a>
+		</form>
+</center></body>
+</html>
