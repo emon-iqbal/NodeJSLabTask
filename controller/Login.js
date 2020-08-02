@@ -11,21 +11,14 @@ router.get('/',
 router.post('/', function(req, res)
 {
 
-	if(!req.body.uname && !req.body.pwd)
-	{
-		res.send('PLEASE ENTER YOUR NAME and a password to GO AHEAD');
-		/*setTimeout(function(){res.render('Login/Log');}, 3000);*/
-	}
-	/*if(!req.body.uname && !req.body.pass)
-	{
-		setTimeout(function()
-					{
-						res.redirect('/Login');
-					}, 3000);
-	}*/
-	else
-	{
+	if(req.body.uname == "emon" && req.body.password == "112134"){
 		res.redirect('/Admin');
+	}
+	else if(req.body.uname == "ratuL" && req.body.password == "raT315"){
+		res.redirect('/Employee');
+	}
+	else{
+		res.send(' ** invalid name/password...PLEASE TRY AGAIN');
 	}
 	
 });
