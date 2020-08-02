@@ -3,6 +3,10 @@ var bodyParser 	= require('body-parser');
 var login 		= require('./controller/Login');
 var admin 		= require('./controller/Admin');
 var employee 	= require('./controller/Employee');
+var addemp 		= require('./controller/Admin/AddEmpLoyee');
+var emplist 	= require('./controller/Admin/AllEmpList');
+var empupdate 	= require('./controller/Admin/UPDATE');
+var empdelete 	= require('./controller/Admin/DELETE');
 var logout 		= require('./controller/LogOuT');
 var app 		= express();
 
@@ -16,11 +20,14 @@ app.use('/Login', login);
 app.use('/LogOuT', logout);
 app.use('/Admin', admin);
 app.use('/Employee', employee);
-
+app.use('/Admin/AddEmpLoyee', addemp);
+app.use('/Admin/AllEmpList', emplist);
+app.use('/Admin/UPDATE', empupdate);
+app.use('/Admin/DELETE', empdelete);
 
 
 app.get('/', function(req, res){
-	res.send("WELCOME TO the Arena of RevoLuTion!<br><br> <a href='/Login'> LOGiN</a> ");
+	res.send("!! ~ W E L C O M E ~ T O ~ T H E ~ A R E N A ~ OF ~ R E V O L U T i O N ~ !! <br><br> <a href='/Login'> LOGiN</a> ");
 });
 
 app.listen(3000, function(){
