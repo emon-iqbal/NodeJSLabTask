@@ -1,7 +1,7 @@
 {
   "name": "nodejslabtask",
   "version": "1.0.0",
-  "description": "A simple web app with two users",
+  "description": "EXPRESS CMS DEVELOPMENT",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
